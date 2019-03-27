@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParImpar
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int num;
+            Console.WriteLine("Informe o numero:");
+            int.TryParse(Console.ReadLine(), out num);
+            while (num != -99)
+            {
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine("Numero eh par");
+                    Console.WriteLine();
+                    int.TryParse(Console.ReadLine(), out num);
+                }
+                else
+                {
+                    Console.WriteLine("Numero eh impar");
+                    Console.WriteLine();
+                    int.TryParse(Console.ReadLine(), out num);
+                }
+
+            }               
+        }
+    }
+}
