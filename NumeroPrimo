@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NumeroPrimo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0, i = 0, cont = 0;
+            Console.WriteLine("Informe o numero: ");
+            int.TryParse(Console.ReadLine(), out num);
+            while (num != -99)
+            {
+                for (i = 2; i <= num / 2; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        cont++;
+                        break;
+                    }
+                }
+                if (cont == 0)
+                {
+                    Console.WriteLine("Numero eh primo");
+                    int.TryParse(Console.ReadLine(), out num);
+                }
+                else
+                {
+                    Console.WriteLine("Numero nao eh primo");
+                    int.TryParse(Console.ReadLine(), out num);
+                    Console.ReadKey();
+                }
+            }
+        }
+    }
+}
